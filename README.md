@@ -8,7 +8,7 @@ Välj (minst) ett problem från ur problems-foldern
 Gör en kopia från `problems/en-us` till `problems/sv-se`
 
 ## Steg 3
-Översätt allt förutom `\problemname{Cold-puter Science}` då vi vill behålla problem-namnen
+Översätt allt förutom `/problemname{Cold-puter Science}` då vi vill behålla problem-namnen. Om du vill ha ett hum om hur det ska se ut kan du kika på `/problems/sv-se/cold.tex`
 
 ## Övrigt
 * Frågor? mejla lagebr[snabel-a]kth.se
