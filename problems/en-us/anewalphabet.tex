@@ -1,0 +1,48 @@
+\problemname{A New Alphabet}
+
+\illustration{0.3}{typewriter}{Photo by \href{https://www.flickr.com/photos/zionfiction/9588998186}{r. nial bradshaw}}
+
+A New Alphabet has been developed for Internet communications.  While the glyphs of the new alphabet don't necessarily improve communications in any meaningful way, they certainly make us \emph{feel cooler}.
+
+You are tasked with creating a translation program to speed up the switch to our more \emph{elite} New Alphabet by automatically translating ASCII plaintext symbols to our new symbol set.
+
+The new alphabet is a one-to-many translation (one character of the English alphabet translates to anywhere between $1$ and $6$ other characters), with each character translation as follows:
+
+\begin{center}
+    \begin{tabular}{|c|c|l||c|c|l|}
+        \hline
+        Original & New & English Description & Original & New & English Description\\
+        \hline
+        \verb+a+ & \verb+@+         & at symbol                                 &  \verb+n+ & \verb+[]\[]+     & brackets, backslash, brackets\\
+        \verb+b+ & \verb+8+         & digit eight                               &  \verb+o+ & \verb+0+         & digit zero \\
+        \verb+c+ & \verb+(+         & open parenthesis                          &  \verb+p+ & \verb+|D+        & bar, capital D\\
+        \verb+d+ & \verb+|)+        & bar, close parenthesis                    &  \verb+q+ & \verb+(,)+       & parenthesis, comma, parenthesis \\
+        \verb+e+ & \verb+3+         & digit three                               &  \verb+r+ & \verb+|Z+        & bar, capital Z \\
+        \verb+f+ & \verb+#+         & number sign (hash)                        &  \verb+s+ & \verb+$+         & dollar sign\\
+        \verb+g+ & \verb+6+         & digit six                                 &  \verb+t+ & \verb+']['+      & quote, brackets, quote \\
+        \verb+h+ & \verb+[-]+       & bracket, hyphen, bracket                  &  \verb+u+ & \verb+|_|+       & bar, underscore, bar\\
+        \verb+i+ & \verb+|+         & bar                                       &  \verb+v+ & \verb+\/+        & backslash, forward slash \\
+        \verb+j+ & \verb+_|+        & underscore, bar                           &  \verb+w+ & \verb+\/\/+      & four slashes \\
+        \verb+k+ & \verb+|<+        & bar, less than                            &  \verb+x+ & \verb+}{+        & curly braces \\
+        \verb+l+ & \verb+1+         & digit one                                 &  \verb+y+ & \verb+`/+        & backtick, forward slash\\
+        \verb+m+ & \verb+[]\/[]+    & brackets, slashes, brackets               &  \verb+z+ & \verb+2+         & digit two\\
+        \hline
+    \end{tabular}
+\end{center}
+For instance, translating the string ``Hello World!'' would result in:
+\begin{center}
+\verb+[-]3110 \/\/0|Z1|)!+
+\end{center}
+Note that uppercase and lowercase letters are both converted, and any other characters remain the same (the exclamation point and space in this example).
+
+\section*{Input}
+
+Input contains one line of text, terminated by a newline.
+The text may contain any characters in the ASCII range $32$--$126$ (space through tilde), as well as $9$ (tab).
+Only characters listed in the above table (A--Z, a--z) should be translated; any non-alphabet characters should be printed (and not modified).
+Input has at most $10\,000$ characters.
+
+
+\section*{Output}
+
+Output the input text with each letter (lowercase and uppercase) translated into its New Alphabet counterpart.
