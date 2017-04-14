@@ -1,0 +1,27 @@
+\problemname{Alphabet Spam}
+
+\illustration{0.4}{spam}{\href{https://en.wikipedia.org/wiki/File:Spam_2.jpg}{Photo} by Bodo Akdeniz via Wikimedia Commons, GFDL}%
+\noindent
+Omkring $90$ procent av alla 300 miljarder e-posts som dagligen skickas är spam. Därför 
+är snabba spamfilter mycket viktiga för stora e-post-leverantörer. Många spammare
+försöker komma runt spamfilter genom att skriva om vissa ord som
+``{\tt M0n3y}'', ``{\tt Ca\$h}'', eller ``{\tt Lo||ery}''.
+
+Ett väldigt enkelt och snabbt spamfilter är baserat på kvoten mellan blanktecken,
+gemener, versaler, och andra symboler. Symboler definieras som tecken som inte 
+faller inom någon av de tre nämnda grupperna.
+
+\section*{Input}
+
+Input består utav:
+\begin{itemize}
+	\item en rad med en sträng som består utav minst $1$ och som mest $100\,000$ tecken.
+\end{itemize}
+Ett förbearbetande steg har redan transformerat alla blanktecken till understreck ({\tt\_}),
+och raden kommer bestå endast utav tecken med ASCII-koder mellan 33 och 126 (inklusive).
+
+\section*{Output}
+
+Svara med fyra rader, som består utav kvoterna för blanktecken, gemener, versaler, och
+symboler (i denna ordning). Ditt svar ska ha ett absolut eller relativt fel på som mest 
+$10^{-6}$.

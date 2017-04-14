@@ -1,0 +1,91 @@
+\problemname{ACM Contest Scoring}
+
+Vårt nya svarssystem till tävlingen håller en kronologisk logg
+över alla svar inlagda av varje lag under tävlingen. För varje
+svar registrerar systemet antalet minuter av tävlingen som gått vid
+inlämning, den bokstav som identifierar tävlingsproblemet, och
+resultatet av att rätta svaret (vilket för enkelhets skull betecknas
+antingen {\tt rätt} eller {\tt fel}).
+
+Ett exempel är följande hypotetiska logg vid en specifik tid:
+
+\vspace{-12pt}
+\begin{verbatim}
+3 E rätt
+10 A fel
+30 C fel
+50 B fel
+100 A fel
+200 A rätt
+250 C fel
+300 D rätt
+\end{verbatim}
+\vspace{-12pt}
+
+Rankningen av lagen relativt varandra bestäms genom en primär och 
+en sekundär poängskala, beräknad från svarsdatan. Den primära skalan
+är antal problem korrekt lösta. Den sekundära skalan är baserad på en kombination
+av tidsåtgång och straff. Specifikt så är ett lags tidspoäng lika med
+summan av inlämningstider som resulterade i {\tt rätt} svar, plus
+ett 20-minuters straff för varje inlämnat {\tt fel} svar av ett problem som
+i slutänden besvaras korrekt. Om inget svar löses korrekt är tidspoängen
+~$0$.
+
+I exemplet ovan ser vi att laget har korrekt besvarat tre problem:
+{\tt E} på deras första försök ($3$~minuter in i tävlingen);
+{\tt A} på deras tredje försök på problemet ($200$~minuter in i
+tävlingen); och {\tt D} på deras första försök på problemet
+($300$~minuter in i tävlingen).
+
+Detta lags tidspoäng (inklusive straff) är $543$. Detta är
+summan av: $3$~minuter för att de löste {\tt E}; $200$~minuter för
+att de löste {\tt A}, med ett tillägg på $40$~straffminuter för
+två tidigare felaktiga inlämningar på problemet; och tillsist
+$300$~minuter för att de löste {\tt D}.
+%
+Lägg märke till att laget också lämnade in svar på {\tt B} och
+{\tt C}, men lyckades aldrig lösa dem, och fick därför inga
+straff för dessa försök.
+
+Enligt tävlingsreglerna, efter att ha löst ett specifikt problem
+ignoreras alla andra följande svar på samma problem (och kommer
+därför inte med i loggen). Eftersom tid är diskretiserat i hela minuter,
+kan mer än ett svar lämnas in på samma problem under en minut, men
+de sparas kronologiskt, så att endast det sista svaret kan vara korrekt.
+
+Som ett andra exempel, studera följand svarslogg:%
+
+\vspace{-12pt}
+\begin{verbatim}
+7 H rätt
+15 B fel
+30 E fel
+35 E rätt
+80 B fel
+80 B rätt
+100 D fel
+100 C fel
+300 C rätt
+300 D fel
+\end{verbatim}
+\vspace{-12pt}
+
+Detta lag löste fyra problem, och deras totala tidspoäng (inklusive staff)
+är $502$, med $7$~minuter för {\tt H}, $35+20$ för {\tt E},
+$80+40$ för {\tt B}, och $300+20$ för {\tt C}.
+
+\section*{Input}
+
+Input innehåller $n$ rader där $0 \leq n \leq 100$, där varje rad
+beskriver ett specifikt svarsinlägg. Ett svarsinlägg har tre delar:
+ett heltal $m$, där $1 \leq m \leq 300$, som betecknar antal gångna minuter
+då svaret togs emot; en versal (stor bokstav) som betecknar det
+specifikaproblemet; och ett ord som är antingen {\tt rätt} eller {\tt fel}.
+Heltalen kommer vara i icke-minskande ordning och kan innehålla
+repetitioner. Efter alla logginlägg är en rad som innehåller endast
+talet $-1$.
+
+\section*{Output}
+
+Svara med två heltal på en rad: antal lösta problem och den totala
+tidspoängen (inklusive straff).
