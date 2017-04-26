@@ -1,1 +1,34 @@
-%
+\problemname{Beavergnaw}
+
+När en bäver smaskar på ett träd hugger den ut en väldigt specifik form ur dess stam. Formen kvar i 
+den del av stammen som bävern ätit på ser ut som två avstympade koner (nedre delen av en kon som 
+fått toppen avskuren med ett snitt som är parallellt med dess bas) som länkas samman av en cylinder.
+Cylindern har en diameter lika med cylinderns höjd, och diametern är också lika med de avstympade
+konernas innerdiameter, alltså diametern på ytan där konen stympats av. De avstympade konernas
+bottendiameter är samma som stammen de huggits ut ifrån. % Inte radbrytning
+En väldigt nyfiken bäver försöker att inte förstöra träden, utan i stället räkna ut vad cylinderns
+diameter borde vara så att hon hugger ut en precis mängd trä. Du ska hjälpa henne med matten.
+% Jag föreslår att lägga in i en fotnot parentesen ovan om vad en avstympad kon är.
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=0.23\textwidth]{draw}
+  \end{center}
+  \caption{A trunk partially eaten by a beaver}
+  \label{fig:example}
+\end{figure}
+
+Vi kommer lösa detta problem för en ideal bäver smaskandes på ett idealt träd. Antag att trädstammen
+är en cylinder med diameter $D$, och att den del av trädet som bävern äter på också har höjden $D$.
+Vad ska diametern av den inre cylindern $d$ vara, så att bävern har smaskat ut exakt $V$ kubikenheter
+trä?
+
+\section*{Input}
+Input består utav flera trädgnagarfall som förs in på separata rader. Varje rad består av heltal
+$D, V$ så att $(1\leq D\leq 100, 1\leq V\leq 1\,000\,000)$. De är separerade utav mellanrum. $D$
+är i en linjär enhet och $V$ i kubikenheter. $V$ ska inte vara större än den totala volym trä
+bävern kan hugga ur trädet. En rad där $D=0$ och $V=0$ följer det sista fallet.
+
+\section*{Output}
+För varje fall, producera en rad med output som består utav ett flyttal som anger värdet av $d$.
+Din output ska vara inom en relative eller absolut felmarginal på $10^{-6}$.
