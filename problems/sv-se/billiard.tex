@@ -1,0 +1,31 @@
+\problemname{Billiard}
+
+På ett \emph{billiard}-bord med horisontell sida $a$ inches och vertikal sida
+$b$ inches, skjuts en boll från mitten av bordet. Efter $s > 0$ sekunder
+kommer bollen tillbaka till den punkt varifrån den sköts, och har då
+studsat $m$ gånger på de vertikala sidorna av bordet och $n$ gånger
+på de horisontella. Räkna ut utskjutningsvinkeln $A$ (mätt från den
+horisontella sidan) -- vilket kommer vara ett tal från och med $0$ 
+till och med $90$ grader -- och bollens ursprungliga hastighet.
+
+Antag att kollisionen med sidorna är elastisk (d.v.s., inga
+energiförluster), och alltså att bollens hastighetskomponenter,
+som är parallella till vardera sida av bordet, är oförändrade.
+Antag även att bollen har radie noll. Kom ihåg att, tillskillnad från
+\emph{biljardbord}, så har billiard-bord inga fickor.
+
+\section*{Indata}
+
+Indata består av en sekvens av rader som vardera består av
+fem positiva heltal separerade av mellanrum. De fem numren är
+$a$, $b$, $s$, $m$, och $n$ och motsvarar respektive värden
+beskrivna ovan. Inget heltal är större än $10~000$.
+
+Indatan avslutas av en rad som innehåller fem nollor.
+
+\section*{Utdata}
+
+För varje rad av indata förutom den sista, returnera en rad bestående utav
+två reella tal (avrundade till exakt två decimalers noggranhet) separerade
+av ett mellanrum. Det första numret är vinkeln $A$ i grader, och det andra
+är bollens hastighet mätt i inches per sekund.
