@@ -1,0 +1,52 @@
+\problemname{Bela}
+
+Unge Mirko är en smart men busig pojke som ofta vandrar omkring i
+parker letandes efter nya idéer. Denna gång möter han pensionärer
+som spelar kortspelet Belote. De bjuder in honom att hjälpa dem
+räkna totala antalet poäng i ett spel.
+
+Varje kort kan identifieras av dess nummer och färg. En uppsättning
+av fyra kort kallas för ``hand''. I början av en spelomgång väljs 
+en färg som ``trumfar'' alla andra, och denna färg kallas för den
+dominanta färgen. Antalet poäng i ett spel är lika med summan av 
+värdena av varje kort i varje hand i spelet. Mirko har lagt märke
+till att pensionärerna har spelat $N$ händer och att färg $B$ var
+den dominanta färgen.
+
+Värdet på varje kort beror på dess nummer och om dess färg är den
+dominanta, och värdet ges från tabell~\ref{tab:score}.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{ccc}
+    Nummer & \multicolumn{2}{c}{Värde}\\
+& Dominant & Inte dominant\\
+\texttt{A} & $11$ & $11$\\
+\texttt{K} & $4$ & $4$\\
+\texttt{Q} & $3$ & $3$\\
+\texttt{J} & $20$ & $2$\\
+\texttt{T} & $10$ & $10$\\
+\texttt{9} & $14$ & $0$\\
+\texttt{8} & $0$ & $0$\\
+\texttt{7} & $0$ & $0$\\
+  \end{tabular}
+  \caption{Scores}
+  \label{tab:score}
+\end{table}
+
+
+Skriv ett program som beräknar och returnerar antalet poäng i spelet.
+
+\section*{Indata}
+
+Den första raden av indatan består utav antalet händer $N$ ($1 \leq N \leq 100$) och 
+ett värde som anger den dominanta färgen $B$ (\texttt{S}, \texttt{H}, \texttt{D}, \texttt{C})
+från uppgiften.
+Var och en av de följande $4N$ raderna innehåller beskrivningen av ett kort
+(det första tecknet är numret på det $i$:te kortet (\texttt{A}, \texttt{K},
+\texttt{Q}, \texttt{J}, \texttt{T}, \texttt{9}, \texttt{8}, \texttt{7}),
+och det andra är färgen (\texttt{S}, \texttt{H}, \texttt{D}, \texttt{C})).
+
+\section*{Utdata}
+
+Det enda raden som skickas som utdata innehåller antalet poäng i spelet.
