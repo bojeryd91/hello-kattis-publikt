@@ -1,0 +1,54 @@
+\problemname{Bounding Robots}
+
+% Simulate a robot walking among obstacles which might block its path.
+%  Determine where it ends up after it finishes walking, and where it thinks it
+%  ends up (as if the obstacles didn't exist).
+
+När du designar din nya hushållshjälpsrobot SERVE-O-MATIC 1000 kommer du testa
+den med ett antal olika prov. I ett prov vill du vara säker på den alltid
+vet var den befinner sig. Du är speciellt angelägen om vad som händer när
+den inte är medveten om en vägg, som den då går in i. Till exempel: om den
+försöker gå framåt tio meter och går in i en väg den inte visste var där efter 
+tre meter, då kommer det vara en sju meter skillnad mellan var den stannade
+och var den {\em tror} att den stannade. Din robot är ännu inte smart nog
+att ta in ny information medan den går, som då denna vägg, så den tror att 
+den har gått tio meter.
+
+För att pröva hur illa detta problem är testar du en virtuell robot i ett 
+virtuellt rum, där roboten inte vet rummets storlek. Roboten väljer en 
+väg att gå, och ditt program simulerar robotens gång och håller koll på var
+den tror att den befinner sig, och var det faktiskt är (genom att stoppa den
+från att gå igenom väggar). Efter att simuleringen avslutas vill du veta hur
+långt bort roboten är från var den tror att den är.
+
+\section*{Indata}
+
+Indata består utav 100 simuleringar.
+
+Varje simulering börjar med en beskrivning av rummet, vilket är två heltal
+$w$ och $l$ (för bredden och längden av det rektangulära rummet, i meter).
+Båda heltal ligger i intervallet $[2, 100]$.
+Roboten kan gå varsomhelst i rektangeln utmärkt av hörnen (0, 0) till
+($w-1$, $l-1$), inklusive kanterna (så den kan gå till (0, 0) eller 
+($w-1$, 0), till exempel). Roboten startar alltid i (0, 0) och dess steg
+är precis en meter långa.
+
+Efter beskrivningen av rummet kommer en beskrivning av vägen roboten
+planerat att gå. Denna beskrivning börjar med ett tal $1 \le n \le 100$,
+antalet steg roboten planerar att ta. Detta följs av $n$ stegbeskrivningar som
+ska göras i följd. Varje stegbeskrivning ger en linje {\tt x y},
+där {\tt x} är något utav {\tt u}, {\tt d}, {\tt l}, eller {\tt r} för 
+respektive riktning upp, ner, vänster eller höger. Talet {\tt y} är antalet
+meter roboten rör sig i den riktningen (i intervallet $[0, 30]$). Upp och
+ner är längs med rummets längd, och vänster och höger är längs med dess
+bredd. Upp och höger är i positiv riktning, medan ner och vänster är i
+negativ riktning.
+
+Indata avslutas när $w$ och $l$ är noll.
+
+\section*{Utdata}
+
+För varje simulering är utdata var roboten tror att den är, som i 
+{\tt roboten tror x y}, och var den faktiskt är, återigen som i
+{\tt roboten är i x y} (där x och y är utbytta med passande värden.
+Skriv ut en blankrad efter varje simulering.
