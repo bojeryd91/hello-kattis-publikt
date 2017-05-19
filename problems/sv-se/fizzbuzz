@@ -1,0 +1,20 @@
+\problemname{FizzBuzz}
+
+\illustration{0.35}{rust-fizzbuzz}{\href{https://chrismorgan.info/media/images/rust-fizzbuzz.svg}{Image} by chris morgan cc by}
+\noindent
+Enligt Wikipedia är FizzBuzz en gruppordlek för barn för att lära dem division.
+Detta kan vara sant, men denna fråga är allmänt använd till att \sout{tortera} testa unga datavetenskapsstudenter
+under programmeringsintervjuer.
+
+Väsentligen är det såhär det fungerar:
+Du skriver ut heltalen från $1$ till $N$, och byter ut alla tal som är delbara med $X$ med \texttt{Fizz}, eller, om de är
+delbara med $Y$, med \texttt{Buzz}. Om talet är delbart med både $X$ och $Y$, skriver du i stället ut \texttt{FizzBuzz}.
+
+Se exempel för vidare klargörande.
+
+\section*{Indata}
+Indata består av ett testfall. Varje testfall består av tre heltal på en rad, $X$, $Y$ och $N$ ($1 \leq X < Y \leq N \leq 100$).
+
+\section*{Utdata}
+Skriv ut heltal från $1$ till $N$ i ordning, varje på en egen rad, och byt ut de tal som är delbara med $X$ med \texttt{Fizz}, 
+de som är delbara med $Y$ med \texttt{Buzz}, och de som är delbara på både $X$ och $Y$ med \texttt{FizzBuzz}.
