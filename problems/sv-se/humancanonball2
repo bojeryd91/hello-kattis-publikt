@@ -1,0 +1,45 @@
+\problemname{The Amazing Human Cannonball}
+
+\illustration{.6}{HS2015HumanCannonball.png}{Source: picgifs.com}
+
+Den fantastiska mänskliga kanonkulan-föreställningen kommer till stan, och du har
+blivit ombedd att dubbelkolla deras beräkningar att ingen kommer bli skadad!
+Den mänskliga kanonkulan avfyras från en kanon som befinner sig på ett avstånd
+$x_1$ från en vertikal vägg med ett hål igenom vilket kanonkulan ska flyga igenom.
+Den nedre kanten av hålet befinner sig på höjd $h_1$ över marken och den övre kanten
+på höjd $h_2$. Kanonkulans initiala hastighet är givet som $v_0$ och du känner även
+till vinkel $\theta$ mellan kanonen och marken.
+
+Tack vare innovativa dräkter kan mänskliga kanonkulor flyga utan luftmotstånd,
+och därför kan deras bana modeleras enligt följande formel:
+
+\begin{eqnarray*}
+    x(t) & = & v_0 t \cos{\theta} \\
+    y(t) & = & v_0 t \sin{\theta} - \frac{1}{2} g t^2
+\end{eqnarray*}
+där $x(t), y(t)$ anger kanonkulans position vid tiden $t$, som avfyrats
+från punkten $(0, 0)$. $g$ är gravitationsaccelerationen ($g = 9.81\ \text{m}/\text{s}^2$).
+
+Skriv ett program som avgår om den mänskliga kanonkulan säkert kan ta sig genom
+hålet i väggen. För att passera säkert behöver det finnas en säkerhetsmarginal
+av $1$ m både under och över den punkt där kulans bana passerar genom väggens
+mittlinje.
+
+\section*{Indata}
+
+Indata består av upp till $100$ testfall. Den första raden anger ett heltal
+$N$ som anger antalet fall som följer.
+Varje testfall har fem parametrar: $v_0 \ \theta \ x_1 \ h_1 \ h_2$, separerade
+av mellanrum.
+$v_0$ ($0 < v_0 \le 200$)
+är kulans initiala hastighet i m/s.
+$\theta$ är vinkel angivet i grader ($0 < \theta < 90$),
+$x_1$ ($0 < x_1 < 1~000$) är avståndet mellan kanonen och väggen,
+$h_1$ och $h_2$ ($0 < h_1 < h_2 < 1~000$)
+är höjden av den nedre och övre kanten av hålet i väggen.
+Alla tal är flyttal (floating point numbers).
+
+\section*{Utdata}
+
+Om kanonkulan kan ta sig genom väggen säkert, skriv ut
+``\texttt{Safe}''.  Annars, skriv ut ``\texttt{Not Safe}''!
