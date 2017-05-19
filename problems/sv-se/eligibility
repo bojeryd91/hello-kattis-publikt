@@ -1,0 +1,61 @@
+\problemname{Eligibility}
+
+\setlength{\columnsep}{15pt}
+\illustration{0.5}{tree.png}{}%
+
+Varje år deltar studenter runt om i världen i ACM ICPC\foonote{Detta
+kan vara den enda problemformulering där denna förkortning utläses 
+som ``Association for Computing Machinery International
+Collegiate Programming Contest''.}. För att delta i denna tävling
+behöver en student uppfylla ett antal kriterier. I detta problem
+kommer du ges information om studenter och du ska skriva ett program
+som avgör deras behörighet att delta i ICPC.
+
+Vi börjar med att anta att varje student uppfyller ``grundläggande
+krav'' som specificeras i ICPS:s regler: studenten är villig att
+tävla i världsfinalen, hen är en registrerad student på åtminstonde
+halvtid, hen tävlar endast för en institution under ett tävlingsår,
+och hen har inte tävlat i två världsfinaler eller fem regionala
+tävlingar.
+
+Reglerna för att bestämma om en student är behörig att tävla i 
+tävlingen 2014--2015 är följande:
+
+\begin{enumerate}
+\item om studenten påbörjade sin högre utbildning under 2010 eller
+senare, är studenten behörig;
+\item om studenten är född under 1991 eller senare, är studenten behörig;
+\item om inget av ovanstående gäller, och studenten har fullgjort
+mer än motsvarande åtta terminer av helttidsstudier, är studenten
+\emph{ej} behörig;
+\item om inget av det ovanstående gäller, kan tränaren ansöka för en
+förlängd behörighet genom att tillhandahålla studentens akademiska
+och professionella förflutna.
+\end{enumerate}
+Angående ``motsvarande åtta terminer av heltidsstudier'', anser vi 
+att varje termin av heltidsstudier motsvarar att en student fullgör
+fem kurser. Alltså: en student som har fullgjort 41 kurser eller fler
+anses ha gjort mer än åtta terminer av heltidsstudier.
+
+\section*{Indata}
+
+Indata består utav ett antal fall. Första raden består av ett positivt
+heltal vilket anger antalet fall som följer. Varje fall är specificerat
+på en rad i följande format
+\begin{verbatim}
+  namn YYYY/MM/DD YYYY/MM/DD kurser
+\end{verbatim}
+där: \verb|namn| är namnet på studenten (upp till 30 alfabetiska tecken);
+det första datumet är då studenten först påbörjade en högre utbildning;
+och det andra datumet anger studentens födelsedag. Alla datum ges på
+formet ovan, med fyra tecken för år och två tecken för månad och för dag.
+\verb|kurser| är ett icke-negativt heltal som anger antalet kurser
+studenten har fullföljt.
+
+Det finns som mest $1~000$ fall.
+
+\section*{Utdata}
+
+För varje rad av utdata, skruv ut studentens namn, följt av ett mellanrum,
+följt av en utav strängarna \verb|eligible|, \verb|ineligible|, och \verb|coach petitions|
+beroende på vad som är lämpligt.
