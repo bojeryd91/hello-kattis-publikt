@@ -1,0 +1,54 @@
+\problemname{Timebomb}
+
+\illustration{.4}{bomb}{Photo by \href{http://2.bp.blogspot.com/_pXlgfIyoeR0/TOOAykjGuAI/AAAAAAAABhA/r2BE16F7p8Y/s400/bomb\%2Bdefuse5.jpg}{Chris
+Welch}}
+
+Du och dina lagkamrater från lokalpolisens bombgrupp har kallats in för att desarmera en
+bomb funnen i stadens enda pub. Av rädslan för de tragiska konsekvenser denna
+bomb kan orsaka går du dit så snabbt som möjligt. Efter en del undersökande finner du att
+antagonisterna har skapat ett listigt sätt att själva desarmera bomben vid behov. Du
+hittar en fjärrkontrol med en knapp som du kan ta med till en säker plats. Du finner
+även att det är möjligt att ansluta bomben till ett trådlöst nätverk och på så vis få ut en
+ASCII-representation av en kod varje två sekunder. Bomben desarmeras då om knappen är
+intryckt när koden är delbar med sex. Men du måste vara försiktig! Om du håller in
+knappen när ASCII-represenationen av koden inte är ett tal delbart med sex, eller
+har en ogiltig represenation för någon siffra, kommer bomben explodera. Du behöver
+förlita dig till dina programmeringskunskaper och skriva ett program som säger dig
+när det är säkert att trycka på knappen, innan den spränger bort puben (och ölen).
+
+\section*{Indata}
+
+Indatan består av en ASCII-representation av en kod. Denna kod har mellan två och åtta siffror.
+Varje siffra är representerad av fem rader och tre kolumner av tecken, vilka antingen kan vara
+ett mellanrum eller en asterix ``\texttt{*}''. Inga andra typer av tecken (förutom ny rad-
+tecknet) kommer någonsin förekomma i indatan. Det finns även en kolumn av mellanrum (och endast
+mellanrum) för att separera varje tecken. Efter det sista tecknet kommer du få en kolumn med
+ny rad-tecken. Notera att även om varje siffra alltid kommer att vara av storleken $5\times 3$,
+kommer det inte finnas någon garanti att det representerar en giltig siffra från och med 0 
+till och med 9. Giltiga $5\times 3$-representationer ges nedan i figur~\ref{fig:digits}.
+
+\begin{figure}[h]
+  \centering
+  \begin{minipage}{0.5\textwidth}
+\begin{verbatim}
+### ### ### ### ### ### ### ### ### ###
+***   * *** *** * * *** *** *** *** ***
+* *   *   *   * * * *   *     * * * * *
+* *   * *** *** *** *** ***   * *** ***
+* *   * *     *   *   * * *   * * *   *
+***   * *** ***   * *** ***   * *** ***
+\end{verbatim}
+  \end{minipage}
+  \caption{Nummertecknen ``{\tt \#}'' längst upp är endast där för att markera de tre kolumner
+          för varje siffra och är inte en del av siffrans representation.}
+  \label{fig:digits}
+\end{figure}
+
+Koden kan ha inledande nollor, därför kan en ASCII-representation, som t.ex. 00000076
+representera talet 76. Du kan anta att varje giltig kod kommer att representera ett
+strikt positivt tal.
+
+\section*{Utdata}
+
+Skriv ut en rad med ``{\tt BEER!!}'' om det är säkert att trycka på knappen och
+desarmera bomben, och annars ``{\tt BOOM!!}''.
