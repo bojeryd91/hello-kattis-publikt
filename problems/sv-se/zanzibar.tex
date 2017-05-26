@@ -1,0 +1,56 @@
+% Problem: Zanzibar
+% Contest: BAPC 2015
+% Author: Walter
+% Requirements: none 
+
+\problemname{Stand on Zanzibar}
+
+\illustration{.4}{800px-Flag_of_Zanzibar.png}{Picture by: \href{https://commons.wikimedia.org/wiki/File:Flag_of_Zanzibar.svg}{Mysid}}
+
+Sköldpaddor lever länge (och väl). Sködpaddor på ön Zanzibar
+är till och med odödliga. Dessutom är de könlösa och föder som
+mest en unge per år.
+Utöver detta gör de ingenting. De lämnar aldrig sitt tropiska
+paradis.
+
+Zanzi Bar, den första sköldpaddan på Zanzibar, har dock ännu
+en sysselsättning: hon håller koll på antalet sköldpaddor på
+ön. Varje nyårsdag räknar hon sköldpaddorna, och skriver ner
+det totala antalet i en liten anteckningsbok. Efter många år
+innehåller denna bok en icke-minskande sekvens av heltal, som
+startar med en eller flera ettor. (Efter att ha kläckts ur
+sitt ägg på Zanzibars vackra strand tog det Zanzi viss tid
+innan hon startade sin egna familj.)
+
+En dag inser Zanzi att det kan vara så att sköldpaddor från
+utomlands kommer till Zanzibar, med båt eller flygplan. Nu
+undrar hon hur många boende som inte är födda på Zanzibar.
+Oturligt nog kan hon endast räkna fram en nedre gräns från
+sekvensen i hennes anteckningsbok. Sannerligen, om antalet
+sköldpaddor under ett år mer än fördubblas jämfört med 
+föregående år måste skillnaden helt förklaras av inflyttning.
+
+Så snart Zanzibar har $1~000~000$ sköldpaddor är hela ön täckt
+av dem, och reproduktion och inflyttning stoppas helt.
+Snälla hjälp Zanzi! Skriv ett program som beräknar den nedre
+gräns på antalet inflyttate sköldpaddor, givet en sekvens,
+som beskrivet nedan.
+
+\section*{Indata}
+	Indata börjar med en rad som innehåller ett heltal $T$,
+  vilket är antalet testfall. Sedan, för varje fall:
+  
+	\begin{itemize}
+		\item En rad innehåller en sekvens med positiva 
+    heltal ($\leq$ 1~000~000) separerade av mellanrum, 
+    vilka är icke-minskande och börjar med en eller 
+    flera ettor. För enkelhets skull ligger ett
+    mellanrum och en nolla vid slutet av sekvensen.
+	\end{itemize}
+ 
+
+
+\section*{Utdata}
+	För varje testfall, skriv ut en rad som innehåller 
+  ett heltal: den nedre gränsen av antalet sköldpaddor
+  som inte är födda på Zanzibar.
